@@ -36,7 +36,6 @@ function App() {
           <input
             type="text"
             className="inputfield"
-            autoFocus
             value={item}
             onKeyDown={inputKey}
             onChange={(e) => setItem(e.target.value)}
@@ -61,7 +60,7 @@ function App() {
           </p>
         )}
       </div>
-      <p>Tanishk Sharma © reactJS</p>
+      <p className="footer">Tanishk Sharma © reactJS</p>
     </div>
   );
 }
