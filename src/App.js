@@ -5,8 +5,14 @@ function App() {
   const [item, setItem] = useState("");
   const [todolist, setTodolist] = useState([]);
 
+  const inputKey = (e) => {
+    if (e.keyCode === 13) {
+      addItems();
+    }
+  };
+
   const addItems = () => {
-    todolist.push({ description: item });
+    todolist.push({ description: item, isCompleted: false });
     setTodolist(todolist);
     setItem("");
   };
@@ -14,6 +20,12 @@ function App() {
   const deleteTask = (index) => {
     const newList = todolist.filter((item, i) => i !== index);
     setTodolist(newList);
+  };
+
+  const completedTask = (index) => {
+    const completeList = [...todolist];
+    completeList[index].isCompleted = !completeList[index].isCompleted;
+    setTodolist(completeList);
   };
 
   return (
@@ -26,8 +38,10 @@ function App() {
             className="inputfield"
             autoFocus
             value={item}
+            onKeyDown={inputKey}
             onChange={(e) => setItem(e.target.value)}
           />
+
           <button className="add-btn" onClick={addItems}>
             ADD
           </button>
@@ -38,6 +52,7 @@ function App() {
               index={index}
               itemData={toDoObject}
               deleteTask={deleteTask}
+              completeTask={completedTask}
             />
           ))
         ) : (
@@ -46,6 +61,7 @@ function App() {
           </p>
         )}
       </div>
+      <p>Tanishk Sharma © reactJS</p>
     </div>
   );
 }
@@ -53,7 +69,12 @@ function App() {
 function ListItem(props) {
   return (
     <div className="list-container">
-      <span> {props.itemData.description} </span>
+      <span
+        className={props.itemData.isCompleted ? "task-complete" : ""}
+        onClick={() => props.completeTask(props.index)}
+      >
+        {props.itemData.description}
+      </span>
       <button onClick={() => props.deleteTask(props.index)} className="del-btn">
         del
       </button>

@@ -1,13 +1,13 @@
 .App-container {
   text-align: center;
   margin: 50px auto;
-  background: lightcoral;
+  background: #ffe4e6;
   max-width: 500px;
   padding-bottom: 1rem;
 }
 .heading {
   border-bottom: 2px solid palevioletred;
-  background-color: palevioletred;
+  background-color: #fb7185;
 }
 
 .inputfield {
@@ -20,9 +20,11 @@
   padding: 0.5rem;
   border-color: transparent;
   cursor: pointer;
+  border-left: 2px solid palevioletred;
 }
 
 .list-container {
+  font-family: sans-serif;
   margin: auto;
   max-width: 400px;
   padding: 0.5rem;
@@ -31,8 +33,17 @@
   text-align: start;
   margin-top: 4%;
   margin-bottom: 1%;
+  cursor: pointer;
+  /* font-size: large; */
 }
 
 .del-btn {
-  /* text-overflow: ellipsis; */
+  margin: 0 auto;
+  padding: 2px;
+}
+
+.task-complete {
+  text-decoration: line-through;
+  color: purple;
+  font-weight: 300;
 }
