@@ -2,17 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Depoyment
+https://todo-list-reactjs-omega.vercel.app/
+deployed using vercel.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `Application`
 1)Add your todo's in the application by writing in inout field and then clicking of ADD btn it will add your todo to the todo list .
@@ -22,5 +15,5 @@ You will also see any lint errors in the console.
 5)if your todo is completed then you can simply click on the todo .
 6)By clicking on the todo . A line-throught will be visible .
 7)it will show that respective todo is completed .
-
+8)it is responsive in nature .
 ###enjoy 
