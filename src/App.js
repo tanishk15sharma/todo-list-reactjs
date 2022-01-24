@@ -75,7 +75,7 @@ function ListItem(props) {
         {props.itemData.description}
       </span>
       <button onClick={() => props.deleteTask(props.index)} className="del-btn">
-        del
+        Delete
       </button>
     </div>
   );
